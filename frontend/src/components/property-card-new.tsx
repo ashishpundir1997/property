@@ -62,7 +62,7 @@ export function PropertyCardNew({ property }: PropertyCardProps) {
         </div>
 
         {/* Content */}
-        <div className="p-6 sm:p-7 flex flex-col flex-1 px-[20px]">
+        <div className="p-6 sm:p-7 flex flex-col flex-1 px-[20px]" style={{padding:"20px"}}>
           {/* Title */}
           <h3 className="font-bold text-sm sm:text-base text-slate-900 line-clamp-2 group-hover:text-orange-600 transition-colors leading-snug mb-3.5">
             {property.title}

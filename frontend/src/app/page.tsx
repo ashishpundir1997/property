@@ -14,7 +14,7 @@ export default function Home() {
       {/* Main Content */}
       <main className="flex-1">
         {/* Page Header */}
-        <section className="py-10 sm:py-14 md:py-18 bg-white border-b border-slate-200">
+        <section className="py-2 sm:py-4 md:py-6 bg-white border-b border-slate-200">
           <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-3 sm:mb-4">
               Properties
