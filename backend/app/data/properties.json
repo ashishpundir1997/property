@@ -1,0 +1,342 @@
+[
+  {
+    "id": 1,
+    "title": "Modern Downtown Apartment",
+    "description": "Stunning 2-bedroom apartment with floor-to-ceiling windows overlooking the city skyline. Featuring hardwood floors, updated kitchen, and in-unit laundry.",
+    "price": 450000,
+    "location": "Downtown",
+    "property_type": "APARTMENT",
+    "status": "AVAILABLE",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": 1200,
+    "images": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800"
+    ],
+    "created_at": "2025-12-01T10:00:00"
+  },
+  {
+    "id": 2,
+    "title": "Spacious Family House",
+    "description": "Beautiful 4-bedroom, 3-bathroom house with a large backyard, perfect for families. Features a modern kitchen, master suite with ensuite, and attached garage.",
+    "price": 750000,
+    "location": "Suburbs",
+    "property_type": "HOUSE",
+    "status": "AVAILABLE",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "area": 2500,
+    "images": [
+      "https://images.unsplash.com/photo-1570129477492-45a003537e1f?w=800",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800"
+    ],
+    "created_at": "2025-11-15T14:30:00"
+  },
+  {
+    "id": 3,
+    "title": "Luxury Beachfront Villa",
+    "description": "Exquisite 5-bedroom villa with private beach access, infinity pool, and Mediterranean architecture. Includes home theater, wine cellar, and spa facilities.",
+    "price": 2000000,
+    "location": "Beachfront",
+    "property_type": "VILLA",
+    "status": "AVAILABLE",
+    "bedrooms": 5,
+    "bathrooms": 4,
+    "area": 4500,
+    "images": [
+      "https://images.unsplash.com/photo-1512917774080-9b274b3d0303?w=800",
+      "https://images.unsplash.com/photo-1569597676829-b8c95f0f5ba9?w=800",
+      "https://images.unsplash.com/photo-1512941691920-25bda097ffd9?w=800",
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800"
+    ],
+    "created_at": "2025-10-20T09:15:00"
+  },
+  {
+    "id": 4,
+    "title": "Prime Commercial Space",
+    "description": "Grade A office space in premium business district. 5000 sq ft of open plan design with meeting rooms, kitchenette, and 24/7 security.",
+    "price": 1200000,
+    "location": "Business District",
+    "property_type": "COMMERCIAL",
+    "status": "AVAILABLE",
+    "bedrooms": 0,
+    "bathrooms": 2,
+    "area": 5000,
+    "images": [
+      "https://images.unsplash.com/photo-1557821552-17105176677c?w=800",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800"
+    ],
+    "created_at": "2025-11-01T11:45:00"
+  },
+  {
+    "id": 5,
+    "title": "Cozy Studio Apartment",
+    "description": "Charming studio apartment perfect for young professionals. Recently renovated with new appliances, efficient layout, and great natural lighting.",
+    "price": 250000,
+    "location": "Downtown",
+    "property_type": "APARTMENT",
+    "status": "AVAILABLE",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "area": 550,
+    "images": [
+      "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=800",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800"
+    ],
+    "created_at": "2025-12-10T13:20:00"
+  },
+  {
+    "id": 6,
+    "title": "Contemporary Townhouse",
+    "description": "Modern 3-story townhouse with rooftop terrace, smart home features, and minimalist design. Located in trendy neighborhood with walkable amenities.",
+    "price": 650000,
+    "location": "Arts District",
+    "property_type": "HOUSE",
+    "status": "AVAILABLE",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area": 1800,
+    "images": [
+      "https://images.unsplash.com/photo-1549887534-f6f2ab91d380?w=800",
+      "https://images.unsplash.com/photo-1576941089067-2de3dd0c3240?w=800",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800"
+    ],
+    "created_at": "2025-11-22T16:00:00"
+  },
+  {
+    "id": 7,
+    "title": "Development Land Opportunity",
+    "description": "Prime 2-acre development land in fast-growing area. Zoned for mixed-use development with all utilities available. Perfect for investment.",
+    "price": 500000,
+    "location": "Suburbs",
+    "property_type": "LAND",
+    "status": "AVAILABLE",
+    "bedrooms": 0,
+    "bathrooms": 0,
+    "area": 87120,
+    "images": [
+      "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=800"
+    ],
+    "created_at": "2025-10-05T10:30:00"
+  },
+  {
+    "id": 8,
+    "title": "Elegant Penthouse Suite",
+    "description": "Breathtaking penthouse with 360-degree views, marble finishes, and concierge service. 3 bedrooms with spa-like master bath and private elevator access.",
+    "price": 1500000,
+    "location": "Downtown",
+    "property_type": "APARTMENT",
+    "status": "SOLD",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "area": 2200,
+    "images": [
+      "https://images.unsplash.com/photo-1493809842364-78817281336d?w=800",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
+    ],
+    "created_at": "2025-08-14T08:45:00"
+  },
+  {
+    "id": 9,
+    "title": "Charming Colonial Home",
+    "description": "Historic 4-bedroom colonial with modern updates. Original hardwood floors, period details, and recently updated HVAC and electrical systems.",
+    "price": 580000,
+    "location": "Historic District",
+    "property_type": "HOUSE",
+    "status": "AVAILABLE",
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "area": 2100,
+    "images": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800"
+    ],
+    "created_at": "2025-09-28T15:15:00"
+  },
+  {
+    "id": 10,
+    "title": "Modern Minimalist Condo",
+    "description": "Sleek 2-bedroom condo with open concept living, stainless steel appliances, and integrated smart home technology. Perfect for contemporary lifestyle.",
+    "price": 380000,
+    "location": "Tech Hub",
+    "property_type": "APARTMENT",
+    "status": "AVAILABLE",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": 1100,
+    "images": [
+      "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=800",
+      "https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=800"
+    ],
+    "created_at": "2025-12-05T12:00:00"
+  },
+  {
+    "id": 11,
+    "title": "Luxury Mountain Retreat",
+    "description": "Stunning 4-bedroom villa nestled in mountains with panoramic views. Features fireplace, wine cellar, hot tub, and direct trail access.",
+    "price": 1800000,
+    "location": "Mountain Valley",
+    "property_type": "VILLA",
+    "status": "AVAILABLE",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "area": 3800,
+    "images": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
+      "https://images.unsplash.com/photo-1569597676829-b8c95f0f5ba9?w=800",
+      "https://images.unsplash.com/photo-1512941691920-25bda097ffd9?w=800"
+    ],
+    "created_at": "2025-11-09T14:45:00"
+  },
+  {
+    "id": 12,
+    "title": "Retail Space with Excellent Foot Traffic",
+    "description": "Prime retail location on main street with high foot traffic. Recently renovated with large display windows and flexible layout options.",
+    "price": 850000,
+    "location": "Downtown",
+    "property_type": "COMMERCIAL",
+    "status": "AVAILABLE",
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "area": 2500,
+    "images": [
+      "https://images.unsplash.com/photo-1557821552-17105176677c?w=800"
+    ],
+    "created_at": "2025-10-18T09:30:00"
+  },
+  {
+    "id": 13,
+    "title": "Suburban Family Estate",
+    "description": "Impressive 5-bedroom estate on 1.5 acres with pool, tennis court, and guest house. Perfect for large families or entertaining.",
+    "price": 980000,
+    "location": "Suburbs",
+    "property_type": "HOUSE",
+    "status": "UNDER_CONTRACT",
+    "bedrooms": 5,
+    "bathrooms": 4,
+    "area": 3500,
+    "images": [
+      "https://images.unsplash.com/photo-1570129477492-45a003537e1f?w=800",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800"
+    ],
+    "created_at": "2025-11-20T11:00:00"
+  },
+  {
+    "id": 14,
+    "title": "Waterfront Cottage",
+    "description": "Charming 2-bedroom cottage with direct water access and sunset views. Ideal as primary residence or vacation home with boathouse.",
+    "price": 425000,
+    "location": "Waterfront",
+    "property_type": "HOUSE",
+    "status": "AVAILABLE",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "area": 1200,
+    "images": [
+      "https://images.unsplash.com/photo-1516455207990-7a41e1d2edfd?w=800",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800"
+    ],
+    "created_at": "2025-12-02T13:15:00"
+  },
+  {
+    "id": 15,
+    "title": "Corporate Office Complex",
+    "description": "Large office complex with 8000 sq ft of space, multiple conference rooms, break rooms, and dedicated parking. Ideal for growing companies.",
+    "price": 2500000,
+    "location": "Business District",
+    "property_type": "COMMERCIAL",
+    "status": "AVAILABLE",
+    "bedrooms": 0,
+    "bathrooms": 4,
+    "area": 8000,
+    "images": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800"
+    ],
+    "created_at": "2025-10-12T10:00:00"
+  },
+  {
+    "id": 16,
+    "title": "Urban Loft Conversion",
+    "description": "Trendy loft-style apartment in converted warehouse with exposed brick, high ceilings, and industrial chic design. Move-in ready.",
+    "price": 520000,
+    "location": "Arts District",
+    "property_type": "APARTMENT",
+    "status": "AVAILABLE",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": 1400,
+    "images": [
+      "https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=800",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800"
+    ],
+    "created_at": "2025-11-30T16:45:00"
+  },
+  {
+    "id": 17,
+    "title": "Residential Investment Property",
+    "description": "3-unit apartment building with excellent rental history and steady income. Great for investment with good appreciation potential.",
+    "price": 1100000,
+    "location": "Suburbs",
+    "property_type": "HOUSE",
+    "status": "AVAILABLE",
+    "bedrooms": 6,
+    "bathrooms": 3,
+    "area": 3000,
+    "images": [
+      "https://images.unsplash.com/photo-1570129477492-45a003537e1f?w=800"
+    ],
+    "created_at": "2025-10-25T14:20:00"
+  },
+  {
+    "id": 18,
+    "title": "Prestigious Golf Course Estate",
+    "description": "Exclusive villa overlooking championship golf course with manicured grounds, smart home automation, and resort-style amenities.",
+    "price": 2200000,
+    "location": "Golf Community",
+    "property_type": "VILLA",
+    "status": "AVAILABLE",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "area": 4000,
+    "images": [
+      "https://images.unsplash.com/photo-1512917774080-9b274b3d0303?w=800",
+      "https://images.unsplash.com/photo-1512941691920-25bda097ffd9?w=800"
+    ],
+    "created_at": "2025-09-08T11:30:00"
+  },
+  {
+    "id": 19,
+    "title": "Investment Land Portfolio",
+    "description": "Large 5-acre parcel with excellent development potential. Multiple zoning options and strategic location for commercial or residential development.",
+    "price": 750000,
+    "location": "Expanding Suburb",
+    "property_type": "LAND",
+    "status": "AVAILABLE",
+    "bedrooms": 0,
+    "bathrooms": 0,
+    "area": 217800,
+    "images": [
+      "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=800"
+    ],
+    "created_at": "2025-11-11T09:00:00"
+  },
+  {
+    "id": 20,
+    "title": "Boutique Hotel Property",
+    "description": "Historic building converted to boutique hotel with 15 rooms, restaurant, and event spaces. Strong revenue history and premium location.",
+    "price": 3500000,
+    "location": "Historic Downtown",
+    "property_type": "COMMERCIAL",
+    "status": "AVAILABLE",
+    "bedrooms": 0,
+    "bathrooms": 15,
+    "area": 12000,
+    "images": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800"
+    ],
+    "created_at": "2025-09-15T13:45:00"
+  }
+]

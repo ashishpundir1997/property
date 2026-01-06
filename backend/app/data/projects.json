@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "title": "Downtown Luxury Apartment Complex",
+    "description": "A stunning 15-story mixed-use development featuring 120 luxury apartments with rooftop gardens, fitness facilities, and ground-floor retail spaces. Modern architecture with sustainable building practices.",
+    "location": "Downtown Core",
+    "images": [
+      "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800"
+    ],
+    "start_date": "2023-03-15",
+    "end_date": "2025-09-20",
+    "created_at": "2025-09-25T10:00:00"
+  },
+  {
+    "id": 2,
+    "title": "Suburban Family Community Development",
+    "description": "Large-scale residential community with 50 single-family homes featuring modern architecture, community gardens, and shared recreational facilities. Designed with families in mind.",
+    "location": "Suburban Heights",
+    "images": [
+      "https://images.unsplash.com/photo-1570129477492-45a003537e1f?w=800",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800"
+    ],
+    "start_date": "2023-06-01",
+    "end_date": "2025-08-30",
+    "created_at": "2025-09-10T14:30:00"
+  },
+  {
+    "id": 3,
+    "title": "Historic Downtown Renovation",
+    "description": "Complete restoration of 1920s historic building into modern office spaces and creative studios. Preserved original architectural details while adding contemporary amenities and green infrastructure.",
+    "location": "Historic District",
+    "images": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+      "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800"
+    ],
+    "start_date": "2024-01-10",
+    "end_date": "2025-11-15",
+    "created_at": "2025-11-20T11:15:00"
+  },
+  {
+    "id": 4,
+    "title": "Waterfront Resort and Spa",
+    "description": "Luxury 200-room beachfront resort with spa, multiple restaurants, and water sports facilities. Premium finishes throughout with ocean-view suites and infinity pools.",
+    "location": "Beachfront Resort Area",
+    "images": [
+      "https://images.unsplash.com/photo-1512917774080-9b274b3d0303?w=800",
+      "https://images.unsplash.com/photo-1569597676829-b8c95f0f5ba9?w=800"
+    ],
+    "start_date": "2023-09-01",
+    "end_date": "2025-10-31",
+    "created_at": "2025-11-05T16:45:00"
+  },
+  {
+    "id": 5,
+    "title": "Tech Hub Office Campus",
+    "description": "State-of-the-art office campus for tech companies featuring collaborative workspaces, innovation labs, and sustainability-focused design. LEED Gold certified.",
+    "location": "Tech Park District",
+    "images": [
+      "https://images.unsplash.com/photo-1557821552-17105176677c?w=800",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800"
+    ],
+    "start_date": "2024-02-15",
+    "end_date": null,
+    "created_at": "2025-01-10T09:30:00"
+  }
+]
