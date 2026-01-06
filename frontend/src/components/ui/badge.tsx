@@ -4,24 +4,39 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
-  variant?: "default" | "secondary" | "destructive" | "outline";
+  variant?: "primary" | "secondary" | "success" | "warning" | "error" | "info" | "neutral";
+  size?: "sm" | "md";
 }
 
 export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
-  ({ className, variant = "default", ...props }, ref) => {
+  ({
+    className,
+    variant = "primary",
+    size = "sm",
+    ...props
+  }, ref) => {
     const variants = {
-      default: "bg-blue-100 text-blue-800",
-      secondary: "bg-slate-100 text-slate-800",
-      destructive: "bg-red-100 text-red-800",
-      outline: "border border-slate-300 text-slate-800",
+      primary: "badge-primary",
+      secondary: "badge-secondary",
+      success: "badge-success",
+      warning: "badge-warning",
+      error: "badge-error",
+      info: "badge-info",
+      neutral: "badge-neutral",
+    };
+
+    const sizeClasses = {
+      sm: "px-3 py-1.5 text-xs font-semibold rounded-full",
+      md: "px-4 py-2 text-sm font-semibold rounded-full",
     };
 
     return (
       <span
         ref={ref}
         className={cn(
-          "inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold",
+          "badge inline-block",
           variants[variant],
+          sizeClasses[size],
           className
         )}
         {...props}

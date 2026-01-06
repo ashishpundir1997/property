@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* ===== CSS VARIABLES - DESIGN SYSTEM ===== */
 :root {
@@ -385,4 +383,126 @@ body {
 /* Loading skeleton */
 .skeleton {
   @apply bg-slate-200 animate-pulse rounded;
+}
+
+/* Additional responsive utilities */
+.heading-gradient {
+  background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Better padding defaults */
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* Ensure proper spacing for containers */
+.page-container {
+  min-height: 100vh;
+  background-color: white;
+}
+
+/* Button hover effects */
+button {
+  transition: all var(--duration-200) var(--timing-ease-out);
+}
+
+/* Form input styling */
+input, textarea, select {
+  transition: all var(--duration-200) var(--timing-ease-out);
+}
+
+input:focus, textarea:focus, select:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #f97316;
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ensure proper text selection */
+::selection {
+  background-color: #f97316;
+  color: white;
+}
+
+/* Better list styling */
+ul, ol {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Responsive image container */
+.image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #e2e8f0;
+  border-radius: 0.5rem;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Grid responsive utilities */
+.grid-auto-fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .grid-auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+/* Flexbox utilities */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

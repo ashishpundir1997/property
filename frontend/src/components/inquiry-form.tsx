@@ -86,18 +86,18 @@ export function InquiryForm({ propertyId }: InquiryFormProps) {
   };
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Interested in this property?</CardTitle>
+    <Card className="sticky top-24">
+      <CardHeader className="border-b border-slate-200" style={{ padding: '16px 20px' }}>
+        <CardTitle className="text-lg sm:text-xl">Interested in this property?</CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className="pt-6 sm:pt-7">
         {submitted ? (
-          <div className="rounded-lg bg-green-50 p-4 text-green-700">
-            <p className="font-medium">Thank you for your inquiry!</p>
-            <p className="text-sm">We will contact you shortly.</p>
+          <div className="rounded-lg bg-green-50 p-4 sm:p-5 text-green-700 space-y-1">
+            <p className="font-semibold text-sm sm:text-base">Thank you for your inquiry!</p>
+            <p className="text-xs sm:text-sm">We will contact you shortly.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
             <Input
               label="Your Name"
               name="customer_name"
@@ -138,7 +138,7 @@ export function InquiryForm({ propertyId }: InquiryFormProps) {
             <Button
               type="submit"
               isLoading={isPending}
-              className="w-full"
+              className="w-full mt-2"
             >
               Send Inquiry
             </Button>

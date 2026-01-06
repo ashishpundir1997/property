@@ -4,18 +4,20 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "default" | "secondary" | "destructive" | "outline" | "ghost";
+  variant?: "primary" | "secondary" | "outline" | "text" | "danger";
   size?: "sm" | "md" | "lg";
   isLoading?: boolean;
+  fullWidth?: boolean;
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       className,
-      variant = "default",
+      variant = "primary",
       size = "md",
       isLoading,
+      fullWidth = false,
       children,
       disabled,
       ...props
@@ -23,25 +25,23 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed";
+      "btn transition-all duration-200 focus-visible:outline-offset-2 disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2";
 
     const variants = {
-      default:
-        "bg-blue-600 text-white hover:bg-blue-700 focus-visible:ring-blue-600",
-      secondary:
-        "bg-slate-200 text-slate-900 hover:bg-slate-300 focus-visible:ring-slate-200",
-      destructive:
-        "bg-red-600 text-white hover:bg-red-700 focus-visible:ring-red-600",
-      outline:
-        "border border-slate-300 bg-white hover:bg-slate-50 focus-visible:ring-slate-300",
-      ghost: "hover:bg-slate-100 focus-visible:ring-slate-300",
+      primary: "btn-primary",
+      secondary: "btn-secondary",
+      outline: "btn-outline",
+      text: "btn-text",
+      danger: "bg-accent-600 text-white hover:bg-accent-700",
     };
 
     const sizes = {
-      sm: "px-3 py-1.5 text-sm",
-      md: "px-4 py-2 text-base",
-      lg: "px-6 py-3 text-lg",
+      sm: "px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-medium rounded-lg",
+      md: "px-6 sm:px-7 py-2.5 sm:py-3 text-sm sm:text-base font-medium rounded-lg",
+      lg: "px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-lg",
     };
+
+    const widthClass = fullWidth ? "w-full" : "";
 
     return (
       <button
@@ -50,6 +50,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           baseStyles,
           variants[variant],
           sizes[size],
+          widthClass,
           className
         )}
         disabled={disabled || isLoading}
@@ -77,11 +78,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
               />
             </svg>
-            Loading...
           </>
-        ) : (
-          children
-        )}
+        ) : null}
+        {children}
       </button>
     );
   }

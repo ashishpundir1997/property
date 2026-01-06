@@ -54,16 +54,16 @@ export function PropertyListingNew() {
   }
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 sm:space-y-8">
       {/* Filters Section */}
-      <div className="bg-gradient-to-r from-slate-50 to-slate-100 rounded-xl p-6 border border-slate-200/50">
-        <div className="flex items-center gap-2 mb-6">
+      <div className="bg-white rounded-xl p-5 sm:p-6 md:p-7 border border-slate-200/50 flex flex-col gap-3">
+        <div className="flex items-center gap-2 mb-5 sm:mb-6">
           <Filter className="w-5 h-5 text-orange-500" />
-          <h3 className="text-lg font-bold text-slate-900">Filters</h3>
+          <h3 className="text-base sm:text-lg font-bold text-slate-900">Filters</h3>
         </div>
 
         {/* Search */}
-        <div className="mb-6">
+        <div className="mb-5 sm:mb-6">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
             <input
@@ -74,16 +74,16 @@ export function PropertyListingNew() {
                 setSearchQuery(e.target.value);
                 setCurrentPage(1);
               }}
-              className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2.5 sm:py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm sm:text-base"
             />
           </div>
         </div>
 
         {/* Filters Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {/* Property Type */}
           <div>
-            <label className="block text-sm font-semibold text-slate-700 mb-2">
+            <label className="block text-xs sm:text-sm font-semibold text-slate-700 mb-2.5">
               Property Type
             </label>
             <select
@@ -92,7 +92,7 @@ export function PropertyListingNew() {
                 setSelectedType(e.target.value);
                 setCurrentPage(1);
               }}
-              className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 appearance-none cursor-pointer"
+              className="w-full px-3 sm:px-4 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 appearance-none cursor-pointer text-sm sm:text-base bg-white"
             >
               <option value="ALL">All Types</option>
               <option value="APARTMENT">Apartment</option>
@@ -105,7 +105,7 @@ export function PropertyListingNew() {
 
           {/* Status */}
           <div>
-            <label className="block text-sm font-semibold text-slate-700 mb-2">
+            <label className="block text-xs sm:text-sm font-semibold text-slate-700 mb-2.5">
               Status
             </label>
             <select
@@ -114,7 +114,7 @@ export function PropertyListingNew() {
                 setSelectedStatus(e.target.value);
                 setCurrentPage(1);
               }}
-              className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 appearance-none cursor-pointer"
+              className="w-full px-3 sm:px-4 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 appearance-none cursor-pointer text-sm sm:text-base bg-white"
             >
               <option value="ALL">All Status</option>
               <option value="AVAILABLE">Available</option>
@@ -124,8 +124,8 @@ export function PropertyListingNew() {
           </div>
 
           {/* Price Range */}
-          <div className="md:col-span-2">
-            <label className="block text-sm font-semibold text-slate-700 mb-2">
+          <div className="sm:col-span-2 lg:col-span-2">
+            <label className="block text-xs sm:text-sm font-semibold text-slate-700 mb-2.5">
               Price Range: ${(priceRange[0] / 1000).toFixed(0)}K - ${(priceRange[1] / 1000).toFixed(0)}K
             </label>
             <input
@@ -144,7 +144,7 @@ export function PropertyListingNew() {
         </div>
 
         {/* Results Count */}
-        <div className="mt-6 text-sm text-slate-600">
+        <div className="mt-5 sm:mt-6 text-xs sm:text-sm text-slate-600">
           Showing <span className="font-semibold text-slate-900">{filtered.length}</span> properties
         </div>
       </div>
@@ -152,23 +152,23 @@ export function PropertyListingNew() {
       {/* Properties Grid */}
       {paginatedProperties.length > 0 ? (
         <>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6 lg:gap-7">
             {paginatedProperties.map((property: any) => (
               <PropertyCardNew key={property.id} property={property} />
             ))}
           </div>
 
           {/* Pagination */}
-          <div className="flex items-center justify-center gap-2 mt-12">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-10 sm:mt-12 md:mt-14">
             <button
               onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
               disabled={currentPage === 1}
-              className="px-4 py-2 border border-slate-300 rounded-lg hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="px-4 sm:px-5 py-2.5 border border-slate-300 rounded-lg hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm sm:text-base font-medium"
             >
               Previous
             </button>
 
-            <div className="flex gap-2">
+            <div className="flex gap-1.5 sm:gap-2">
               {Array.from({ length: totalPages }, (_, i) => i + 1)
                 .filter(
                   (p) => Math.abs(p - currentPage) <= 2 || p === 1 || p === totalPages
@@ -176,11 +176,11 @@ export function PropertyListingNew() {
                 .map((page, i, arr) => (
                   <React.Fragment key={page}>
                     {i > 0 && arr[i - 1] !== page - 1 && (
-                      <span className="text-slate-500">...</span>
+                      <span className="text-slate-500 text-sm px-1">...</span>
                     )}
                     <button
                       onClick={() => setCurrentPage(page)}
-                      className={`px-3 py-2 rounded-lg font-medium transition-colors ${
+                      className={`px-3 sm:px-4 py-2 rounded-lg font-medium transition-colors text-sm sm:text-base ${
                         currentPage === page
                           ? "bg-orange-500 text-white"
                           : "border border-slate-300 hover:bg-slate-50"
@@ -195,7 +195,7 @@ export function PropertyListingNew() {
             <button
               onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
               disabled={currentPage === totalPages}
-              className="px-4 py-2 border border-slate-300 rounded-lg hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="px-4 sm:px-5 py-2.5 border border-slate-300 rounded-lg hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm sm:text-base font-medium"
             >
               Next
             </button>
@@ -203,7 +203,7 @@ export function PropertyListingNew() {
         </>
       ) : (
         <div className="text-center py-12">
-          <p className="text-slate-600 text-lg">
+          <p className="text-slate-600 text-base sm:text-lg">
             No properties found matching your criteria.
           </p>
         </div>

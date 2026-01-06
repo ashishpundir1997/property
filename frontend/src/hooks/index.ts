@@ -5,6 +5,12 @@ import {
   projectsAPI,
 } from "@/lib/api";
 import {
+  getMockProperties,
+  getMockPropertyById,
+  getMockInquiries,
+  getMockProjects,
+} from "@/lib/mock-data";
+import {
   Property,
   PropertyCreate,
   PropertyStatus,
@@ -14,6 +20,9 @@ import {
   Project,
   ProjectCreate,
 } from "@/lib/types";
+
+// Use mock data instead of API
+const USE_MOCK_DATA = true;
 
 // Properties Hooks
 export const useProperties = (
@@ -30,14 +39,14 @@ export const useProperties = (
 ) => {
   return useQuery({
     queryKey: ["properties", page, limit, filters],
-    queryFn: () => propertiesAPI.list(page, limit, filters),
+    queryFn: () => USE_MOCK_DATA ? getMockProperties(page, limit) : propertiesAPI.list(page, limit, filters),
   });
 };
 
 export const useProperty = (id: number) => {
   return useQuery({
     queryKey: ["property", id],
-    queryFn: () => propertiesAPI.getById(id),
+    queryFn: () => USE_MOCK_DATA ? getMockPropertyById(id) : propertiesAPI.getById(id),
     enabled: !!id,
   });
 };
@@ -86,7 +95,7 @@ export const useInquiries = (
 ) => {
   return useQuery({
     queryKey: ["inquiries", page, limit, filters],
-    queryFn: () => inquiriesAPI.list(page, limit, filters),
+    queryFn: () => USE_MOCK_DATA ? getMockInquiries(page, limit) : inquiriesAPI.list(page, limit, filters),
   });
 };
 
@@ -135,7 +144,7 @@ export const useDeleteInquiry = () => {
 export const useProjects = (page: number = 1, limit: number = 10) => {
   return useQuery({
     queryKey: ["projects", page, limit],
-    queryFn: () => projectsAPI.list(page, limit),
+    queryFn: () => USE_MOCK_DATA ? getMockProjects(page, limit) : projectsAPI.list(page, limit),
   });
 };
 

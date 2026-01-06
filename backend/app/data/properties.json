@@ -1,23 +1,5 @@
 [
   {
-    "id": 1,
-    "title": "Modern Downtown Apartment",
-    "description": "Stunning 2-bedroom apartment with floor-to-ceiling windows overlooking the city skyline. Featuring hardwood floors, updated kitchen, and in-unit laundry.",
-    "price": 450000,
-    "location": "Downtown",
-    "property_type": "APARTMENT",
-    "status": "AVAILABLE",
-    "bedrooms": 2,
-    "bathrooms": 2,
-    "area": 1200,
-    "images": [
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800",
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800",
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800"
-    ],
-    "created_at": "2025-12-01T10:00:00"
-  },
-  {
     "id": 2,
     "title": "Spacious Family House",
     "description": "Beautiful 4-bedroom, 3-bathroom house with a large backyard, perfect for families. Features a modern kitchen, master suite with ensuite, and attached garage.",

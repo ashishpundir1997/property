@@ -60,78 +60,54 @@ export function PropertyCard({ property }: PropertyCardProps) {
         </div>
 
         {/* Content */}
-        <div className="p-5 flex flex-col flex-1">
+        <div className="p-6 sm:p-7 flex flex-col flex-1">
           {/* Title */}
-          <h3 className="font-bold text-lg text-slate-900 line-clamp-2 group-hover:text-orange-600 transition-colors">
+          <h3 className="font-bold text-sm sm:text-base text-slate-900 line-clamp-2 group-hover:text-orange-600 transition-colors leading-snug mb-3.5">
             {property.title}
           </h3>
 
           {/* Location */}
-          <div className="flex items-center gap-2 mt-2 text-slate-600 text-sm">
+          <div className="flex items-center gap-2 mb-4 text-slate-600 text-xs sm:text-sm">
             <MapPin className="w-4 h-4 text-orange-500 flex-shrink-0" />
             <span className="line-clamp-1">{property.location}</span>
           </div>
 
           {/* Type Badge */}
-          <div className="mt-3">
-            <span className="inline-block px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium">
-              {getPropertyTypeLabel(property.type)}
+          <div className="mb-5">
+            <span className="inline-block px-3.5 py-2 bg-orange-100 text-orange-700 rounded-full text-xs font-semibold">
+              {getPropertyTypeLabel(property.property_type)}
             </span>
           </div>
 
           {/* Divider */}
-          <div className="border-t border-slate-200/50 my-4" />
+          <div className="border-t border-slate-200 my-5 sm:my-6" />
 
           {/* Features Grid */}
-          <div className="grid grid-cols-3 gap-3 mt-auto">
+          <div className="grid grid-cols-3 gap-4 sm:gap-5 mt-auto pt-3">
             <div className="text-center">
-              <div className="flex items-center justify-center gap-1 text-slate-700 font-semibold">
-                <Bed className="w-4 h-4 text-orange-500" />
-                {property.bedrooms}
+              <div className="flex flex-col items-center justify-center mb-2.5">
+                <Bed className="w-5 h-5 text-orange-500 mb-1.5" />
+                <span className="text-slate-900 font-bold text-base sm:text-lg">{property.bedrooms}</span>
               </div>
-              <p className="text-xs text-slate-500 mt-1">Beds</p>
+              <p className="text-xs text-slate-500 font-medium">Beds</p>
             </div>
             <div className="text-center">
-              <div className="flex items-center justify-center gap-1 text-slate-700 font-semibold">
-                <Bath className="w-4 h-4 text-orange-500" />
-                {property.bathrooms}
+              <div className="flex flex-col items-center justify-center mb-2.5">
+                <Bath className="w-5 h-5 text-orange-500 mb-1.5" />
+                <span className="text-slate-900 font-bold text-base sm:text-lg">{property.bathrooms}</span>
               </div>
-              <p className="text-xs text-slate-500 mt-1">Baths</p>
+              <p className="text-xs text-slate-500 font-medium">Baths</p>
             </div>
             <div className="text-center">
-              <div className="flex items-center justify-center gap-1 text-slate-700 font-semibold">
-                <Ruler className="w-4 h-4 text-orange-500" />
-                {property.squareFeet}
+              <div className="flex flex-col items-center justify-center mb-2.5">
+                <Ruler className="w-5 h-5 text-orange-500 mb-1.5" />
+                <span className="text-slate-900 font-bold text-base sm:text-lg">{formatArea(property.area)}</span>
               </div>
-              <p className="text-xs text-slate-500 mt-1">Sqft</p>
-
-            <div className="grid grid-cols-3 gap-2 pt-2 border-t border-slate-100">
-              <div className="text-center">
-                <p className="text-sm font-semibold text-slate-900">
-                  {property.bedrooms}
-                </p>
-                <p className="text-xs text-slate-500">Beds</p>
-              </div>
-              <div className="text-center">
-                <p className="text-sm font-semibold text-slate-900">
-                  {property.bathrooms}
-                </p>
-                <p className="text-xs text-slate-500">Baths</p>
-              </div>
-              <div className="text-center">
-                <p className="text-sm font-semibold text-slate-900">
-                  {formatArea(property.area)}
-                </p>
-                <p className="text-xs text-slate-500">sqft</p>
-              </div>
+              <p className="text-xs text-slate-500 font-medium">Sqft</p>
             </div>
-
-            <p className="pt-2 text-xs text-slate-500">
-              {getPropertyTypeLabel(property.property_type)}
-            </p>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </Link>
   );
 }
